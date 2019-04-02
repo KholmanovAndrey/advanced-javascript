@@ -88,6 +88,7 @@ class CartItem {
 }
 
 let products = new ProductsList();
+let cart = new CartList();
 
 // const products = [
 //     {title: 'Notebook', price: 2000},
