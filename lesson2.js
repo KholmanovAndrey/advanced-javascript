@@ -16,10 +16,16 @@ class Burger {
         this.price = size.price;
         this.calories = size.calories;
         this.stuffing = stuffing;
-        console.log(this.stuffing);
+        console.log(this.price, this.calories);
+        this.addTopping();
     }
-    addTopping(topping){
-
+    addTopping(){
+        this.stuffing.forEach(stuf => {
+            this.price += stuf.price;
+            this.calories += stuf.calories;
+            console.log(stuf);
+        });
+        console.log(this.price, this.calories);
     }
 }
 
