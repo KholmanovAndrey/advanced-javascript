@@ -42,7 +42,7 @@
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
                     if (xhr.status !== 200) {
-                        console.log('error')
+                        reject('error');
                     } else {
                         resolve(xhr.responseText);
                     }
@@ -56,6 +56,9 @@
         .then(result => {
             this.goods = JSON.parse(result);
             console.log(this.goods);
+        })
+        .catch(result => {
+            console.log(result);
         });
 
 </script>
