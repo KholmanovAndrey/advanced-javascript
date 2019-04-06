@@ -1,53 +1,54 @@
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+
 class ProductsList {
     constructor(){
-        this.products = [];
-        this.summa = 0;
+        this.goods = [];
+        this.allProducts = [];
         this.init();
     }
     init(){
-        this.fetchProducts();
-        this.render();
-        this.summaAllProducts();
-        console.log(this.summa);
+        this._getProducts();
     }
-    fetchProducts(){
-        this.products = [
-            {title: 'Notebook', price: 2000},
-            {title: 'Mouse', price: 20},
-            {title: 'Keyboard', price: 48},
-            {title: 'Gamepad', price: 63},
-            {title: 'Chair', price: 200},
-        ];
+    _getProducts(){
+        fetch(`${API}/catalogData.json`)
+            .then(result => result.json())
+            .then(data => {
+                this.goods = [...data];
+                this.render();
+            })
+            .catch(error => {
+                console.log(error)
+            });
     }
     render(){
         const block = document.querySelector('.products');
-        this.products.forEach(product => {
+        this.goods.forEach(product => {
             const prod = new Product(product);
-            block.insertAdjacentHTML('beforeend', prod.render());
-        });
+            this.allProducts.push(prod);
+            block.insertAdjacentHTML('beforeend', prod.render())
+        })
     }
-    summaAllProducts(){
-        this.products.forEach(product => {
-            this.summa += product.price;
-        });
+    sumPrice(){
+        return this.allProducts.reduce((accum, item) => accum += item.price, 0)
     }
 }
 
 class Product {
     constructor(product, img = 'https://placehold.it/200x150'){
-        this.title = product.title;
+        this.product_name = product.product_name;
         this.price = product.price;
-        this.img = img;
+        this.id_product = product.id_product;
+        this.img = img
     }
     render(){
         return `<div class="product-item">
                     <img src="${this.img}" alt="Some img">
                     <div class="desc">
-                        <h3>${this.title}</h3>
+                        <h3>${this.product_name}</h3>
                         <p>${this.price} $</p>
-                        <button type="button" class="add-to-cart">Купить</button>
+                        <button class="add-to-cart" data-id="${this.id_product}">Купить</button>
                     </div>
-                </div>`;
+                </div>`
     }
 }
 
