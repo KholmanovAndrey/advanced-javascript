@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+
+//    let getRequest = (url, cb) => {
+//        let xhr = new XMLHttpRequest();
+//        // window.ActiveXObject() -> let xhr = new ActiveXObject() // IE7-
+//        xhr.open('GET', url, true);
+//
+//        xhr.onreadystatechange = () => {
+//            if (xhr.readyState === 4) {
+//                if (xhr.status !== 200) {
+//                    console.log('error')
+//                } else {
+//                    cb(xhr.responseText);
+//                }
+//            }
+//        };
+//        xhr.send()
+//    };
+//
+//    getRequest(`${API}/catalogData.json`, data => {
+//        this.goods = JSON.parse(data);
+//        console.log(this.goods);
+//    });
+
+    let getRequest = (url) => {
+        return new Promise((resolve, reject) => {
+            let xhr = new XMLHttpRequest();
+            // window.ActiveXObject() -> let xhr = new ActiveXObject() // IE7-
+            xhr.open('GET', url, true);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status !== 200) {
+                        console.log('error')
+                    } else {
+                        resolve(xhr.responseText);
+                    }
+                }
+            };
+            xhr.send()
+        });
+    };
+
+    getRequest(`${API}/catalogData.json`)
+        .then(result => {
+            this.goods = JSON.parse(result);
+            console.log(this.goods);
+        });
+
+</script>
+</body>
+</html>
