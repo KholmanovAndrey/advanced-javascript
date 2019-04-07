@@ -23,6 +23,8 @@ a
     display: flex
     justify-content: space-between
     align-items: center
+  &__cart
+    position: relative
 
 .btn-cart
   padding: .5rem 1rem
@@ -55,12 +57,12 @@ a
   background-color: #f3f3f3
   border: 1px solid #666666
 
-.add-to-cart
+.button
   padding: .3rem .6rem
   background-color: darkred
   color: #ffffff
   cursor: pointer
-  border: 3px solid transparent
+  border: 2px solid transparent
   -webkit-border-radius: .6rem
   -moz-border-radius: .6rem
   border-radius: .6rem
@@ -71,4 +73,22 @@ a
   &:hover
     background-color: #ffffff
     color: darkred
-    border: 3px solid darkred
+    border: 2px solid darkred
+
+.cart
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  width: 320px
+  padding: 1rem
+  border: 1px solid #666666
+  background-color: #f3f3f3
+
+.cart-item
+  display: flex
+  justify-content: space-between
+  margin-bottom: 1rem
+  &__desc2
+    width: 25%
+    text-align: right
