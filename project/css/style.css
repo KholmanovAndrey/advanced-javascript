@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #666666; }
+  .header__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__cart {
+    position: relative; }
+
+.btn-cart {
+  padding: 0.5rem 1rem;
+  background-color: darkred;
+  color: #ffffff;
+  cursor: pointer;
+  border: 3px solid transparent;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  border-radius: 0.6rem;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .btn-cart:hover {
+    background-color: #ffffff;
+    color: darkred;
+    border: 3px solid darkred; }
+
+.products {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap; }
+
+.product-item {
+  padding: 0.5rem;
+  background-color: #f3f3f3;
+  border: 1px solid #666666; }
+
+.button {
+  padding: 0.3rem 0.6rem;
+  background-color: darkred;
+  color: #ffffff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  border-radius: 0.6rem;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .button:hover {
+    background-color: #ffffff;
+    color: darkred;
+    border: 2px solid darkred; }
+
+.invisible {
+  display: none; }
+
+.cart-block {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  padding: 1rem;
+  border: 1px solid #666666;
+  background-color: #f3f3f3; }
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem; }
+  .cart-item__desc2 {
+    width: 25%;
+    text-align: right; }
+
+.product-bio {
+  display: flex;
+  justify-content: space-between; }
+
+/*# sourceMappingURL=style.css.map */
