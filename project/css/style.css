@@ -75,8 +75,10 @@ a {
     color: darkred;
     border: 2px solid darkred; }
 
-.cart {
-  display: none;
+.invisible {
+  display: none; }
+
+.cart-block {
   position: absolute;
   top: 100%;
   right: 0;
@@ -92,5 +94,9 @@ a {
   .cart-item__desc2 {
     width: 25%;
     text-align: right; }
+
+.product-bio {
+  display: flex;
+  justify-content: space-between; }
 
 /*# sourceMappingURL=style.css.map */
