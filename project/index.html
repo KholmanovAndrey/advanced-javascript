@@ -11,14 +11,15 @@
     <header>
         <div class="logo">E-shop</div>
         <div class="cart">
-            <form action="#" class="search-form">
+            <form action="#" class="search-form" @submit.parent="filterGoods">
                 <input type="text" class="search-field" v-model="searchLine">
-                <button class="btn-search" type="submit" @click="filterGoods(searchLine)">
+                <button class="btn-search" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
-            <button class="btn-cart" type="button" @click="toggleCart(isVisibleCart)">Корзина</button>
-            <div class="cart-block" :class="{ invisible: !isVisibleCart }">
+            <button class="btn-cart" type="button" @click="isVisibleCart = !isVisibleCart">Корзина</button>
+            <div class="cart-block" v-show="isVisibleCart">
+                <p v-if="!goodsCart.length">Корзина пуста</p>
                 <div class="cart-item" v-for="product of goodsCart" :key="product.id_product">
                     <div class="product-bio">
                         <img :src="imgCart" alt="Some image">
