@@ -170,3 +170,12 @@ img {
     border: none;
     border-bottom: 2px solid #fafafa;
 }
+
+.error {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+
+    color: #ffffff;
+    background-color: red;
+}

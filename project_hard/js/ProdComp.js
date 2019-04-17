@@ -24,8 +24,8 @@ Vue.component('products', {
             });
     },
     methods: {
-        filter(userSearch){
-            let regexp = new RegExp(userSearch, 'i');
+        filter(){
+            let regexp = new RegExp(this.$root.$refs.search.userSearch, 'i');
             this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
