@@ -1,0 +1,62 @@
+[
+    {
+        "query": "change",
+        "name": "Gamepad",
+        "date": "April 22nd 2019, 10:31:10 am"
+    },
+    {
+        "query": "add",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:32:34 am"
+    },
+    {
+        "query": "delete",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:32:42 am"
+    },
+    {
+        "query": "add",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:32:48 am"
+    },
+    {
+        "query": "change",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:32:49 am"
+    },
+    {
+        "query": "change",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:32:49 am"
+    },
+    {
+        "query": "change",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:33:00 am"
+    },
+    {
+        "query": "change",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:33:01 am"
+    },
+    {
+        "query": "change",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:33:02 am"
+    },
+    {
+        "query": "change",
+        "name": "Keyboard",
+        "date": "April 22nd 2019, 10:33:12 am"
+    },
+    {
+        "query": "change",
+        "name": "Мышка",
+        "date": "April 22nd 2019, 10:33:19 am"
+    },
+    {
+        "query": "delete",
+        "name": "Мышка",
+        "date": "April 22nd 2019, 10:33:20 am"
+    }
+]
